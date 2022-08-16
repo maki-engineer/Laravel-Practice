@@ -14,6 +14,7 @@ class HelloController extends Controller
   public function index(Request $request)
   {
     $items = DB::table("people")->get();
+
     return view('hello.index', ['items' => $items]);
   }
 
@@ -44,7 +45,7 @@ class HelloController extends Controller
       "age"  => $request->age,
     ];
 
-    DB::insert("insert into people(name, mail, age) values(:name, :mail, :age)", $param);
+    DB::table("people")->insert($param);
 
     return redirect("/hello");
   }
@@ -90,10 +91,9 @@ class HelloController extends Controller
 
   public function show(Request $request)
   {
-    $id   = $request->id;
-    $item = DB::table("people")->where("id", $id)->first();
+    $items = DB::table("people")->get();
 
-    return view("hello.show", ["item" => $item]);
+    return view("hello.show", ["items" => $items]);
   }
 
 }
