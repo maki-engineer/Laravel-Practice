@@ -30,3 +30,5 @@ Route::get("/hello/show", "App\Http\Controllers\HelloController@show");
 Route::get("/person", "App\Http\Controllers\PersonController@index");
 Route::get("/person/find", "App\Http\Controllers\PersonController@find");
 Route::post("/person/find", "App\Http\Controllers\PersonController@search");
+Route::get("/person/add", "App\Http\Controllers\PersonController@add");
+Route::post("/person/add", "App\Http\Controllers\PersonController@create");
