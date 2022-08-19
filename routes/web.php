@@ -40,3 +40,5 @@ Route::post("/person/del", "App\Http\Controllers\PersonController@remove");
 Route::get("/board", "App\Http\Controllers\BoardController@index");
 Route::get("/board/add", "App\Http\Controllers\BoardController@add");
 Route::post("/board/add", "App\Http\Controllers\BoardController@create");
+
+Route::resource("/rest", "App\Http\Controllers\RestappController");
