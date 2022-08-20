@@ -14,6 +14,7 @@
    th {background-color:#999; color:fff; padding:5px 10px;}
    td {border:solid 1px #aaa; color:#999; padding:5px 10px;}
    </style>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
    <h1>@yield('title')</h1>
